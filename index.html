@@ -9,6 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9QH9X648Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D9QH9X648Z');
+    </script>
+
     <style>
         :root {
             --primary-color: #48dbfb;
@@ -30,7 +38,6 @@
         h1, h2, h3 { color: var(--heading-color); margin-bottom: 20px; }
         h2 { text-align: center; font-size: 2.5rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
         section { padding: 30px 0; }
-
         .header { 
             background-color: var(--card-bg-color);
             padding: 15px 0; 
@@ -40,14 +47,12 @@
         .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
         .nav a { color: var(--text-color); text-decoration: none; margin-left: 25px; font-weight: 600; transition: color 0.3s ease; }
         .nav a:hover { color: var(--primary-color); }
-
         #features { background-color: var(--background-color); }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .feature-card { background-color: var(--card-bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 30px; text-align: center; }
         .feature-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; }
         .feature-card h3 { margin-bottom: 10px; font-size: 1.4rem; }
         .feature-card p { font-size: 0.95rem; color: #b0b0b0; }
-
         #download { background-color: var(--background-color); padding-top: 50px; }
         .game-title-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
         .game-title-header h3 { font-size: 2.2rem; margin-bottom: 0; }
@@ -58,7 +63,6 @@
         .game-info-grid p strong { color: #aaa; }
         .download-button { display: block; background-color: var(--primary-color); color: #121212; padding: 15px; text-decoration: none; border-radius: 8px; font-size: 1.2rem; font-weight: 700; text-align: center; transition: all 0.3s ease; }
         .download-button:hover { background-color: #00c2f0; transform: scale(1.03); box-shadow: 0 8px 25px rgba(72, 219, 251, 0.3); }
-
         #screenshots { background-color: var(--background-color); }
         .screenshot-scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .screenshot-scroller::-webkit-scrollbar { display: none; }
@@ -66,11 +70,9 @@
         .screenshot-inner { display: flex; gap: 15px; padding-bottom: 15px; }
         .screenshot-item { flex: 0 0 65%; max-width: 280px; }
         .screenshot-item img { width: 100%; height: auto; display: block; border-radius: 8px; border: 2px solid var(--border-color); }
-
         .footer { background-color: var(--card-bg-color); text-align: center; padding: 25px 0; margin-top: 30px; border-top: 1px solid var(--border-color); }
         .footer p { font-size: 0.9rem; color: #888; margin-bottom: 5px; }
         .footer a { color: var(--primary-color); text-decoration: none; }
-
         @media (max-width: 768px) {
             .header .container { flex-direction: column; gap: 15px; }
             h2 { font-size: 2rem; }
@@ -154,23 +156,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const screenshotsSection = document.getElementById('screenshots');
-
             if (screenshotsSection) {
                 setTimeout(() => {
                     const scrollToPosition = screenshotsSection.offsetTop;
-
                     window.scrollTo({
                         top: scrollToPosition,
                         behavior: 'smooth'
                     });
-
                     setTimeout(() => {
                         window.scrollTo({
                             top: 0,
                             behavior: 'smooth'
                         });
                     }, 2000);
-
                 }, 500);
             }
         });
